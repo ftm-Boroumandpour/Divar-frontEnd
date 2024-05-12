@@ -18,7 +18,7 @@ function Router() {
   return (
     <Routes>
         <Route index element={<HomePage/>}/>
-        <Route path="/dashboard" element={data ? <DashoadrPage/> : <Navigate to="/"/>}/>
+        <Route path="/dashboard" element={data ? <DashoadrPage/> : <Navigate to="/auth"/>}/>
         <Route path="/auth" element={data? <Navigate to="/dashboard"/>:<AuthPage/> }/>
         <Route path="/admin" element={data && data.data.role==="ADMIN" ? <AdminPage/>:<Navigate to="/"/>}/>
         <Route path="*" element={<PageNotFound/>}/>

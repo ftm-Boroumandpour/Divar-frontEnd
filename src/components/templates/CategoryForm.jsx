@@ -29,11 +29,11 @@ function CategoryForm() {
         {data?.status===201 && <p>دسته بندی با موفقیت ایجاد شد</p>}
         {!!error && <p>مشکلی پیش آمده است</p>}
         <label htmlFor="name">اسم دسته بندی</label>
-        <input type="text" name="name" id="name" value={form.name} />
+        <input type="text" name="name" id="name"  />
         <label htmlFor="slug">اسلاگ  </label>
-        <input type="text" name="slug" id="slug" value={form.slug} />
+        <input type="text" name="slug" id="slug"  />
         <label htmlFor="icon">آیکون  </label>
-        <input type="text" name="icon" id="icon" value={form.icon} />
+        <input type="text" name="icon" id="icon"  />
         <button type="submit" disabled={isLoading}>ایجاد</button>
     </form>
   )

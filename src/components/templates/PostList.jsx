@@ -35,13 +35,13 @@ function PostList() {
                         <img src={`${import.meta.env.VITE_BASE_URL}${post.images[0]}`} />
                         <div>
                             <p>{post.options.title}</p>
-                            <sapn>{post.options.content}</sapn>
+                            <p>{post.options.content}</p>
                         </div>
                         <button onClick={()=>(delHandler(post._id))}>حذف آگهی</button>
                         
                         <div className={styles.price}>
                             <p>{new Date(post.createdAt).toLocaleDateString("fa-IR")}</p>
-                            <sapn>{sp(post.amount)}تومان</sapn>
+                            <p>{sp(post.amount)}تومان</p>
                         </div>
                     </div>
                 ))
