@@ -1,16 +1,14 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import styles from "./Header.module.css"
 import { useQuery } from "@tanstack/react-query"
 import { getProfile } from "../services/user"
 import { deleteCookie } from "../utils/cookie"
 
 function Header() {
-    let navigate = useNavigate()
+    
     const { data, refetch } = useQuery(["profile"], getProfile)
 
-    const goTOauthHandler = () => {
-        navigate("/auth")
-    }
+    
 
     const exitHandler = () => {
         deleteCookie()
@@ -30,7 +28,6 @@ function Header() {
                         </span>
                         <span className={styles.submenu}>
                         <ul>
-                            {/* {data && data.data.role==="ADMIN" && <li onClick={adminHandler}>پنل ادمین</li>} */}
                             {data && data.data.role === "ADMIN" && <li><Link to="/admin">پنل ادمین</Link></li>}
                             {data && data.data.role === "USER" && <li><Link to="/dashboard">پنل کاربر</Link></li>}
                             <li onClick={exitHandler}>خروج</li>
