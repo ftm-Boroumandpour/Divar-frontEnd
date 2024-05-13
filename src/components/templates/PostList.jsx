@@ -3,7 +3,7 @@ import { deletePost, getPosts } from "../../services/user";
 import Loader from "../modules/Loader";
 import { sp } from "../../utils/numbers";
 
-import styles from "./Postlist.module.css";
+import styles from "./PostList.module.css"
 
 function PostList() {
   const { data, isLoading } = useQuery(["my-post-list"], getPosts);
