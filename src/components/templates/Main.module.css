@@ -4,6 +4,7 @@
     justify-content: space-between;
     margin-top: 20px;
     width: calc(100% - 200px);
+    height: fit-content;
 }
 
 .card{
@@ -28,6 +29,16 @@
     flex-direction: column;
     justify-content: space-between;
 
+}
+.info button{
+    width: 80px;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    border: none;
+    background-color: #a62626;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .info div{

@@ -14,5 +14,8 @@ const getAllPosts=()=>api.get("")
 
 const deletePost = (id) => api.delete(`post/delete/${id}`)
 
+const getDtailsPost=({queryKey})=> api.get(`post/${queryKey[1]}`)
 
-export {getProfile , getPosts ,getAllPosts ,deletePost}
+
+
+export {getProfile , getPosts ,getAllPosts ,deletePost , getDtailsPost}
